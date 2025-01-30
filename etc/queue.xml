@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:framework:Queue/etc/queue.xsd">
+   
+    <!-- Define the message broker configuration -->
+    <broker topic="order.fetch.topic">
+        <queue name="order_fetch_queue" consumer="Klizer\Srs\Model\Consumer\OrderFetchConsumer" />
+    </broker>
+    <broker topic="order.insert.topic">
+        <queue name="order_insert_queue" consumer="Klizer\Srs\Model\Consumer\OrderInsertConsumer" />
+    </broker>
+
+</config>

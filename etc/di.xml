@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\MessageQueue\ConsumerFactory">
+        <arguments>
+            <argument name="consumers" xsi:type="array">
+                <item name="order_fetch_consumer" xsi:type="string">Klizer\Srs\Model\Consumer\OrderFetchConsumer</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Klizer\Srs\Model\Consumer\OrderInsertConsumer">
+        <arguments>
+            <argument name="messageFactory" xsi:type="object">Magento\Framework\MessageQueue\MessageFactory</argument>
+            <argument name="consumerConfiguration" xsi:type="object">Magento\Framework\MessageQueue\ConsumerConfiguration</argument>
+            <argument name="queueInterface" xsi:type="object">Magento\Framework\MessageQueue\Consumer\QueueInterface</argument>
+        </arguments>
+    </type>
+</config>
+

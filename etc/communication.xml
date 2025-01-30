@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue.xsd">
+    <!-- you can name topic according to self -->
+    <topic name="order.fetch.topic" request="string" />
+    <topic name="order.insert.topic" request="string" />
+    <topic name="srsorders" request="string" />
+</config>

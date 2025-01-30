@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue_consumer.xsd">
+    <consumer name="order_fetch_consumer" queue="order_fetch_queue" connection="amqp" consumerInstance="Klizer\Srs\Model\Consumer\OrderFetchConsumer"/>
+    <consumer name="order_insert_consumer" queue="order_insert_queue" connection="amqp" consumerInstance="Klizer\Srs\Model\Consumer\OrderInsertConsumer"/>
+</config>
